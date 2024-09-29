@@ -6,10 +6,13 @@ services:
     expose:
       - 8080
     networks:
-      - postgresql_default
+      - default
       - mariadb_default
+      - postgresql_default
 
 networks:
+  default:
+    driver: bridge
   mariadb_default:
     external: true
   postgresql_default:
