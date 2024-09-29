@@ -1,0 +1,16 @@
+services:
+
+  adminer:
+      image: adminer
+      restart: always
+      expose:
+        - 8080
+  networks:
+    - postgresql_default
+    - mariadb_default
+
+networks:
+  mariadb_default:
+    external: true
+  postgresql_default:
+    external: true
