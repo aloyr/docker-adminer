@@ -5,9 +5,9 @@ services:
       restart: always
       expose:
         - 8080
-  networks:
-    - postgresql_default
-    - mariadb_default
+    networks:
+      - postgresql_default
+      - mariadb_default
 
 networks:
   mariadb_default:
