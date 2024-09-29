@@ -8,12 +8,15 @@ services:
     networks:
       - default
       - mariadb_default
+      - nginxproxymanager_default
       - postgresql_default
 
 networks:
   default:
     driver: bridge
   mariadb_default:
+    external: true
+  nginxproxymanager_default:
     external: true
   postgresql_default:
     external: true
